@@ -1,0 +1,18 @@
+@import './base.css';
+@import "@fontsource/playfair-display";
+@import "@fortawesome/fontawesome-free/css/all.css";
+
+/* variables */
+:root {
+    --classy-font: "Playfair Display", serif;
+    --main-font: "sans-serif";
+}
+
+body {
+    background-color: lightgrey !important;
+}
+
+a {
+    text-decoration: none !important;
+    color: inherit;
+}
