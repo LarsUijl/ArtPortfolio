@@ -6,14 +6,14 @@ export default {
 
 <template>
   <div class="nav-bar">
-    <router-link class="nav-brand" to="Home">
+    <router-link class="nav-brand" to="/Home">
       <span class="text-light">
       <span class="text-danger text-">SORAYA</span>LICIA
     </span>
     </router-link>
-    <router-link class="navbar-item" to="Gallery">Gallery</router-link>
-    <router-link class="navbar-item" to="About">About</router-link>
-    <router-link class="navbar-item" to="Contact">Contact</router-link>
+    <router-link class="navbar-item" to="/Gallery">Gallery</router-link>
+    <router-link class="navbar-item" to="/About">About</router-link>
+    <router-link class="navbar-item" to="/Contact">Contact</router-link>
   </div>
 </template>
 

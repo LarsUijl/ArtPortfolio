@@ -1,8 +1,8 @@
 <template>
   <div class="contact d-flex flex-column justify-content-center align-items-center bg-light">
-    <h2 class="display-6 w-50 text-center my-4">Get in contact</h2>
-    <p class="w-50 text-center">Fill out the form below, or get in touch by emailing: management@sorayalicia.com</p>
-    <form class="d-flex flex-column w-50" @submit.prevent="submitForm">
+    <h2 class="display-6 width text-center my-4">Get in contact</h2>
+    <p class="width text-center">Fill out the form below, or get in touch by emailing: management@sorayalicia.com</p>
+    <form class="width d-flex flex-column" @submit.prevent="submitForm">
       <label for="firstName">First name*</label>
       <input id="firstName" placeholder="John" v-model="firstName" required>
 
@@ -60,5 +60,21 @@ label {
 input, textarea, button {
   padding: 8px 12px 8px 12px;
   margin-bottom: 16px;
+}
+
+.width {
+  width: 45%;
+}
+
+@media screen and (max-width: 600px) {
+  .width {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .width {
+    width: 60%;
+  }
 }
 </style>

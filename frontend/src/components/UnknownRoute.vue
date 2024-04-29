@@ -5,9 +5,9 @@ export default {
 </script>
 
 <template>
-  <div>Oops seems that page doesnt exist, Please go back to the home page</div>
+  <div>Oops that page doesn't seem to exist, Please go back to the home page</div>
   <div>
-    <router-link class="border-5" to="Home">Home</router-link>
+    <router-link class="border-5" to="/Home">Home</router-link>
   </div>
 </template>
 

@@ -1,4 +1,4 @@
-import {createMemoryHistory, createRouter} from 'vue-router'
+import {createWebHashHistory, createRouter} from 'vue-router'
 
 import Home from '@/components/Home.vue';
 import UnknownRoute from "@/components/UnknownRoute.vue";
@@ -8,28 +8,34 @@ import GalleryPhotography from "@/components/Portfolio/Gallery/GalleryPhotograph
 import GallerySketches from "@/components/Portfolio/Gallery/GallerySketches.vue";
 import About from "@/components/Portfolio/About.vue";
 import Contact from "@/components/Portfolio/Contact.vue";
-
-const routes = [
-    {path: '/', name: "Home",  component: Home},
-    {path: '/home', name: "Home", component: Home},
-    {path: '/:pathMatch(.*)*', component: UnknownRoute},
-    {
-        path: '/gallery', name: "Gallery", component: GalleryOverview,
-        children: [
-            {path: '/paintings', component: GalleryPaintings},
-            {path: '/photography', component: GalleryPhotography},
-            {path: '/sketches', component: GallerySketches}
-        ]
-    },
-    {path: '/about', name: "About", component: About},
-    {path: '/contact', name: "Contact", component: Contact},
-
-    // new routes here
-]
+import GalleryDetail from "@/components/Portfolio/Gallery/GalleryDetail.vue";
 
 const router = createRouter({
-    history: createMemoryHistory(),
-    routes,
+    history: createWebHashHistory(),
+    routes: [
+        {path: '/', name: "Home", component: Home},
+        {path: '/home', name: "Home", component: Home},
+        {path: '/:pathMatch(.*)*', component: UnknownRoute},
+        {
+            path: '/Gallery', name: "Gallery", component: GalleryOverview,
+            children: [
+                {
+                    path: 'paintings', component: GalleryPaintings,
+                    children: [{path: ':id', component: GalleryDetail}]
+                },
+                {
+                    path: 'photography', component: GalleryPhotography,
+                    children: [{path: ':id', component: GalleryDetail}]
+                },
+                {
+                    path: 'sketches', component: GallerySketches,
+                    children: [{path: ':id', component: GalleryDetail}]
+                }
+            ]
+        },
+        {path: '/about', name: "About", component: About},
+        {path: '/contact', name: "Contact", component: Contact},
+    ]
 })
 
 export default router
