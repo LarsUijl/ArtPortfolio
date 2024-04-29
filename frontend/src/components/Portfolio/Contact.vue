@@ -53,6 +53,11 @@ export default {
 </script>
 
 <style scoped>
+.contact {
+  padding-top: 5vh;
+  height: 95vh;
+}
+
 label {
   font-family: var(--classy-font);
 }

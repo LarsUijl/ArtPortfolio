@@ -18,16 +18,16 @@ export default {
       <p class="gallery-title display-5">Gallery</p>
       <ul class="d-flex justify-content-center">
         <li class="gallery-item display-6" :class="{ 'selected-gallery-item': $route.path === '/Gallery/paintings' }">
-          <router-link v-on:click="onClick('paintings')" to="/paintings">Paintings</router-link>
+          <a v-on:click="onClick('paintings')" to="/paintings">Paintings</a>
         </li>
         <li class="gallery-item display-6" :class="{ 'selected-gallery-item': $route.path === '/Gallery/photography' }">
-          <router-link v-on:click="onClick('photography')" to="/photography">Photography</router-link>
+          <a v-on:click="onClick('photography')" to="/photography">Photography</a>
         </li>
         <li class="gallery-item display-6" :class="{ 'selected-gallery-item': $route.path === '/Gallery/sketches' }">
-          <router-link v-on:click="onClick('sketches')" to="/sketches">Sketches</router-link>
+          <a v-on:click="onClick('sketches')" to="/sketches">Sketches</a>
         </li>
         <li class="gallery-item display-6" :class="{ 'selected-gallery-item': $route.path === '/Gallery/music' }">
-          <router-link v-on:click="onClick('music')" to="/music">Music</router-link>
+          <a v-on:click="onClick('music')" to="/music">Music</a>
         </li>
       </ul>
     </div>
@@ -36,6 +36,10 @@ export default {
 </template>
 
 <style scoped>
+.gallery {
+  padding-top: 5vh;
+}
+
 ul {
   margin: 3vh 0 3vh 0;
   padding: 0;

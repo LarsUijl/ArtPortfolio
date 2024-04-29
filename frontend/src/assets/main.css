@@ -2,10 +2,32 @@
 @import "@fontsource/playfair-display";
 @import "@fortawesome/fontawesome-free/css/all.css";
 
+@font-face {
+    font-family: 'Market Deco';
+    src: url('@/assets/fonts/Market_Deco.ttf');
+}
+
+@font-face {
+    font-family: 'Badly Stamped';
+    src: url('@/assets/fonts/BadlyStamped.ttf');
+}
+
+@font-face {
+    font-family: 'Moms Typewriter';
+    src: url('@/assets/fonts/MomsTypewriter.ttf');
+}
+
 /* variables */
 :root {
     --classy-font: "Playfair Display", serif;
-    --main-font: "sans-serif";
+    --main-font: "Badly Stamped", serif;
+    --brand-font: "Moms Typewriter", serif;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
 body {
@@ -15,4 +37,13 @@ body {
 a {
     text-decoration: none !important;
     color: inherit;
+}
+
+.home {
+    background-image: url("@/assets/files/homepageBG.JPG");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    padding-top: 5vh;
 }

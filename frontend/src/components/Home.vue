@@ -5,9 +5,9 @@ export default {
 </script>
 
 <template>
-  <div class="home">
+  <div class="home clearfix">
     <div class="video-container">
-      <video width="480" height="720" controls autoplay muted loop>
+      <video controls autoplay muted loop>
         <source src="@/assets/files/SorayaliciaIntroVideo.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
@@ -18,6 +18,36 @@ export default {
 <style scoped>
 /* Style the video container (optional) */
 .video-container {
-  position: relative; /* Optional for additional styling */
+  float: right;
+  margin: 3vh 3vw 3vh 3vw;
+}
+
+video {
+  width: 24vw;
+  height: 90vh;
+}
+
+@media screen and (max-width: 1300px) {
+  video {
+    width: 35vw;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  video {
+    width: 50vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  video {
+    width: 80vw;
+  }
+
+  .home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 </style>

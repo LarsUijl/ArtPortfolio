@@ -5,28 +5,42 @@ export default {
 </script>
 
 <template>
-  <div class="nav-bar">
-    <router-link class="nav-brand" to="/Home">
+  <div class="nav-bar justify-content-center">
+    <router-link v-if="$route.path !== '/Home'" class="nav-brand" to="/Home">
       <span class="text-light">
-      <span class="text-danger text-">SORAYA</span>LICIA
+      <span class="text-danger">SORAYA</span>LICIA
     </span>
     </router-link>
     <router-link class="navbar-item" to="/Gallery">Gallery</router-link>
     <router-link class="navbar-item" to="/About">About</router-link>
     <router-link class="navbar-item" to="/Contact">Contact</router-link>
+    <div class="socials">
+      <a class="social-button" href="#">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </div>
+    <div class="socials">
+      <a class="social-button" href="#">
+        <i class="fab fa-tiktok"></i>
+      </a>
+    </div>
   </div>
 </template>
 
 <style scoped>
 .nav-bar {
+  width: 100%;
   display: flex;
   align-items: center;
   background-color: transparent;
+  position: fixed;
 }
 
 .nav-brand {
   margin-left: 2vw;
   margin-right: auto;
+  font-family: var(--brand-font);
+  letter-spacing: 0.3vw;
 }
 
 span {
@@ -36,17 +50,43 @@ span {
 
 .navbar-item {
   color: black;
-  font-family: var(--classy-font);
+  font-family: var(--main-font);
   text-decoration: none;
   list-style: none;
-  padding: 10px 20px;
+  padding: 10px 20px 5px 20px;
   letter-spacing: 0.2vw;
   font-weight: normal;
-  font-size: calc(0.8rem + 0.5vw);
+  font-size: calc(1.1rem + 0.7vw);
 }
 
 .navbar-item:hover {
-  color: white;
+  color: #dc3545;
   cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.socials {
+  font-size: calc(1rem + 0.6vw);
+  list-style: none;
+  text-align: center;
+  line-height: 50px;
+}
+
+a.social-button {
+  color: black;
+  transition: color 0.3s ease;
+  padding: 10px 10px;
+}
+
+a.social-button:hover {
+  color: #dc3545;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+@media screen and (max-width: 950px) {
+  .nav-bar {
+    flex-wrap: wrap;
+  }
 }
 </style>

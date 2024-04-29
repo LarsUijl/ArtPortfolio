@@ -18,6 +18,7 @@ const router = createRouter({
         {path: '/:pathMatch(.*)*', component: UnknownRoute},
         {
             path: '/Gallery', name: "Gallery", component: GalleryOverview,
+            redirect: '/Gallery/paintings',
             children: [
                 {
                     path: 'paintings', component: GalleryPaintings,
