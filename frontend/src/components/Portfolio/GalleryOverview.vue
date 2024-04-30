@@ -53,6 +53,7 @@ ul {
   padding: 10px 20px;
   letter-spacing: 0.5vw;
   font-weight: normal;
+  transition: color 0.3s ease;
 }
 
 .gallery-title {

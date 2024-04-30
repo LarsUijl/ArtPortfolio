@@ -5,7 +5,7 @@ export default {
 </script>
 
 <template>
-  <div class="nav-bar justify-content-center">
+  <div class="nav-bar justify-content-center" :class="{ 'nav-bar-bar': $route.path !== '/Home', 'position-fixed': $route.path === '/Home'}">
     <router-link v-if="$route.path !== '/Home'" class="nav-brand" to="/Home">
       <span class="text-light">
       <span class="text-danger">SORAYA</span>LICIA
@@ -15,7 +15,7 @@ export default {
     <router-link class="navbar-item" to="/About">About</router-link>
     <router-link class="navbar-item" to="/Contact">Contact</router-link>
     <div class="socials">
-      <a class="social-button" href="#">
+      <a class="social-button" href="https://www.instagram.com/sorayalicia?igsh=NnpndXRwcmphbmps&utm_source=qr">
         <i class="fab fa-instagram"></i>
       </a>
     </div>
@@ -33,7 +33,12 @@ export default {
   display: flex;
   align-items: center;
   background-color: transparent;
-  position: fixed;
+  position: absolute;
+}
+
+.nav-bar-bar {
+  background-color: RGB(0,0,0, 0.4);
+  z-index: 1;
 }
 
 .nav-brand {

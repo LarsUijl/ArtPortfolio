@@ -24,6 +24,11 @@
     --brand-font: "Moms Typewriter", serif;
 }
 
+#app {
+    width: 100%;
+    height: 100%;
+}
+
 .clearfix::after {
     content: "";
     display: table;
@@ -32,6 +37,8 @@
 
 body {
     background-color: lightgrey !important;
+    width: 100%;
+    height: 100%;
 }
 
 a {
@@ -46,4 +53,11 @@ a {
     background-repeat: no-repeat;
 
     padding-top: 5vh;
+}
+
+.about {
+    background-image: url("@/assets/files/blurry-gradient.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }

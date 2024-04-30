@@ -5,8 +5,13 @@ export default {
 </script>
 
 <template>
-  <div class="home clearfix">
-    <div class="video-container">
+  <div class="home clearfix d-flex">
+    <div class="col-lg-8 col-md-6 col-sm-4 brand-name d-flex align-items-start justify-content-center">
+      <span class="text-light">
+      <span class="text-danger">SORAYA</span>LICIA
+    </span>
+    </div>
+    <div class="col-lg-4 col-md-6 col-sm-8 video-container d-flex align-items-center justify-content-center">
       <video controls autoplay muted loop>
         <source src="@/assets/files/SorayaliciaIntroVideo.mp4" type="video/mp4">
         Your browser does not support the video tag.
@@ -16,10 +21,15 @@ export default {
 </template>
 
 <style scoped>
-/* Style the video container (optional) */
+.brand-name {
+  font-family: var(--brand-font);
+  margin-top: 9vh;
+  font-size: calc(2rem + 1.5vw);
+  font-weight: bold;
+}
+
 .video-container {
   float: right;
-  margin: 3vh 3vw 3vh 3vw;
 }
 
 video {
@@ -29,13 +39,13 @@ video {
 
 @media screen and (max-width: 1300px) {
   video {
-    width: 35vw;
+    width: 30vw;
   }
 }
 
 @media screen and (max-width: 950px) {
   video {
-    width: 50vw;
+    width: 40vw;
   }
 }
 
@@ -46,6 +56,7 @@ video {
 
   .home {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
   }

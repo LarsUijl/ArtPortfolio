@@ -15,7 +15,6 @@ const router = createRouter({
     routes: [
         {path: '/', name: "Home", component: Home},
         {path: '/home', name: "Home", component: Home},
-        {path: '/:pathMatch(.*)*', component: UnknownRoute},
         {
             path: '/Gallery', name: "Gallery", component: GalleryOverview,
             redirect: '/Gallery/paintings',
@@ -36,6 +35,7 @@ const router = createRouter({
         },
         {path: '/about', name: "About", component: About},
         {path: '/contact', name: "Contact", component: Contact},
+        {path: '/:pathMatch(.*)*', component: UnknownRoute}, // Moved to the end
     ]
 })
 

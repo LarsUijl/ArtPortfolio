@@ -9,7 +9,7 @@ export default {
       <div class="container">
         <div class="row">
           <div class="col-md-12 text-center">
-            <span>Copyright © 2019, All Right Reserved Sorayalicia</span>
+            <span>Copyright © 2024, All Right Reserved Sorayalicia</span>
           </div>
         </div>
       </div>
