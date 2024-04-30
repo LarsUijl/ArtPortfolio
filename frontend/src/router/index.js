@@ -1,13 +1,13 @@
 import {createWebHashHistory, createRouter} from 'vue-router'
 
-import Home from '@/components/Home.vue';
+import Home from '@/components/HomePage.vue';
 import UnknownRoute from "@/components/UnknownRoute.vue";
 import GalleryOverview from "@/components/Portfolio/GalleryOverview.vue";
 import GalleryPaintings from "@/components/Portfolio/Gallery/GalleryPaintings.vue";
 import GalleryPhotography from "@/components/Portfolio/Gallery/GalleryPhotography.vue";
 import GallerySketches from "@/components/Portfolio/Gallery/GallerySketches.vue";
-import About from "@/components/Portfolio/About.vue";
-import Contact from "@/components/Portfolio/Contact.vue";
+import About from "@/components/Portfolio/AboutPage.vue";
+import Contact from "@/components/Portfolio/ContactPage.vue";
 import GalleryDetail from "@/components/Portfolio/Gallery/GalleryDetail.vue";
 
 const router = createRouter({

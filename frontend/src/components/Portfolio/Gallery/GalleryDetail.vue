@@ -5,7 +5,7 @@ export default {
 </script>
 
 <template>
-
+  <div>detail</div>
 </template>
 
 <style scoped>
