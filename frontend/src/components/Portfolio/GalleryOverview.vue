@@ -61,6 +61,7 @@ ul {
   font-weight: bold;
   letter-spacing: 0.2vw;
   margin: 20px 0;
+  color: black;
 }
 
 .gallery-item:hover {

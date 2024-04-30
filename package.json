@@ -1,12 +1,5 @@
 {
-  "name": "artportfolio",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "start": "npm run start:frontend && npm run start:backend",
-    "start:frontend": "cd frontend && npm run start",
-    "start:backend": "cd portfolio-server && npm run start"
-  },
-  "private": true
+  "dependencies": {
+    "http-server": "^14.1.1"
+  }
 }

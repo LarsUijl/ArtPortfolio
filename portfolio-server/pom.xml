@@ -11,7 +11,7 @@
     <groupId>sorayalicia</groupId>
     <artifactId>portfolio-server</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <packaging>war</packaging>
+    <packaging>jar</packaging>
     <name>portfolio-server</name>
     <description>portfolio-server</description>
     <properties>
@@ -40,6 +40,7 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>3.2.3</version>
             </plugin>
         </plugins>
     </build>
